@@ -1,0 +1,16 @@
+version: "3"
+services:
+  web:
+    tty: true
+    stdin_open: true
+    build: ./web
+    image: vue3-template:v1.0
+    container_name: vue3-template
+    ports:
+      - 8080:8080
+    volumes:
+      - ./web/app:/app
+    env_file:
+      - ./web/app/.env
+
+  
